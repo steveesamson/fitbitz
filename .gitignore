@@ -4,4 +4,7 @@ dist
 
 coverage
 
-.DS_Dtore
+\.DS_Store
+
+test/__snapshots__
+**/\.DS_Store
