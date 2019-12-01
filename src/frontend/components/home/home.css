@@ -1,0 +1,31 @@
+.home {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.graph {
+  flex: 4;
+  text-align: center;
+  color: #dd0c75;
+  justify-content: center;
+  position: relative;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  background-color: #adced4;
+  background-color: #fefefe;
+  margin: 1em auto;
+  width: 85% !important;
+}
+.detail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+.detail table,
+.detail form {
+  margin: 1em auto;
+}
