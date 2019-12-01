@@ -1,0 +1,356 @@
+/* 1:#1d3e53 */
+/* 2:#254b62 */
+/* 3:#476d7c */
+/* 4:#77abb7 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #d5dce2;
+  /* background-color: rgb(248, 241, 241); */
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+p {
+  margin: 1em 0;
+}
+
+button {
+  display: inline-block;
+  text-decoration: none;
+  transition: 1s;
+  vertical-align: middle;
+  outline: none;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(32, 32, 32, 0.1);
+  outline-color: transparent;
+  cursor: pointer;
+  border: solid 1px #eee;
+  background-color: #eee;
+  color: #333;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+caption {
+  position: relative;
+  padding: 0.7em;
+  text-align: left;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #254b62;
+  font-size: 1.2em;
+  color: #eee;
+}
+
+table {
+  position: relative;
+  border-collapse: collapse;
+  width: auto;
+  min-width: 210px;
+  font-size: 80%;
+  margin: 1em auto;
+  table-layout: fixed;
+  text-align: left;
+  font-family: inherit;
+  box-shadow: 1px 1px 2px rgba(32, 32, 32, 0.1);
+
+  background-color: #dedede;
+  /* background-color: #77abb7; */
+  color: #333;
+  padding: 1em;
+}
+
+/**********Row**************/
+tr {
+  margin: 0;
+  padding: 0;
+  /* border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd; */
+}
+
+/* Zebra striping */
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+/********td and th **************/
+td,
+th {
+  padding: 0.5em;
+  width: auto !important;
+  vertical-align: middle !important;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  color: #333;
+  text-align: left;
+  /* css-3 */
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+}
+
+tbody tr:hover td,
+tbody tr:hover th {
+  background-color: #fff;
+  color: #666;
+}
+
+thead th {
+  text-align: center;
+  font-weight: 600;
+
+  background-color: #476d7c;
+  color: #ccc;
+  text-align: left;
+  font-size: 90%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+button {
+  padding: 0.3em 0.5em;
+  border-radius: 0.2em;
+}
+td button {
+  margin: 0.5em;
+}
+caption button {
+  position: absolute;
+  right: 1em;
+}
+
+.remove-button {
+  color: #eee;
+  background-color: tomato;
+  border-color: tomato;
+}
+
+.edit-button {
+  color: #eee;
+  background-color: steelblue;
+  border-color: steelblue;
+}
+
+.add-button {
+  color: #eee;
+  background-color: #239e6b;
+  border-color: #239e6b;
+}
+
+/* Forms */
+/*********Slick Form***********/
+
+form {
+  display: table;
+  position: relative;
+  font-family: inherit;
+  border: none;
+  padding: 0;
+  font-size: 0.9em;
+  margin: 3em auto;
+  *zoom: 1;
+  width: 25em;
+  background-color: #f7fafc;
+
+  box-shadow: 2px 2px 8px rgba(32, 32, 32, 0.1);
+  /* border: 1px solid #1d3e53; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 0.3em;
+}
+
+form:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+form p {
+  position: relative;
+  text-align: left;
+  line-height: 1.8;
+  display: block;
+  font-family: inherit;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 0.89em;
+  color: #666;
+}
+
+fieldset {
+  position: relative;
+  padding: 0;
+  margin: -1px 0 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.legend {
+  display: block;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.2em 0 0.2em 4%;
+  margin: 1em 0;
+
+  color: #476d7c;
+  font-size: 1em;
+}
+
+.input-group {
+  position: relative !important;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.error {
+  position: relative;
+  background-color: tomato;
+  color: #fff;
+  font-weight: 100;
+  font-size: 0.9em;
+  display: inline-table;
+  margin: 0 auto 0.5em;
+  width: 64%;
+  text-align: left;
+  border-radius: 0.3em;
+  padding: 0.8em 0.5em;
+  line-height: 1.6;
+}
+
+.error:after {
+  content: "";
+  position: absolute;
+  border: 0.4em solid transparent;
+  border-top-color: tomato;
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 1em;
+}
+
+.form-error {
+  position: relative;
+  background-color: tomato;
+  color: #fefefe;
+  font-weight: 600;
+  font-size: 0.9em;
+  display: inline-table;
+  margin: 0 auto 1em;
+  width: 92%;
+  text-align: left;
+  border-radius: 0.3em;
+  padding: 0.8em 1em !important;
+  line-height: 1.6;
+}
+
+/******Inplace text and textarea*****************/
+.inplace_text,
+.inplace_textarea {
+  position: relative !important;
+  padding: 0;
+  width: 64%;
+  margin: 0 18% 15px 18%;
+  clear: both;
+  font-family: inherit;
+  display: block;
+  text-align: left !important;
+}
+
+.inplace_text label,
+.inplace_textarea label {
+  position: relative !important;
+  text-align: left;
+
+  display: block;
+  font-family: inherit;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 0.89em;
+  color: rgb(4, 42, 59);
+}
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="text"],
+textarea {
+  padding: 8px 1em;
+  text-align: left;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+
+  border: 1px solid #dedede;
+
+  color: #333;
+  background: #fff;
+}
+
+textarea {
+  min-height: 6em;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid lightseagreen !important;
+}
+
+.form-submit {
+  padding: 1em;
+  text-align: center;
+  background-color: #fff;
+}
+.form-submit button {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 0.45em 0.85em !important;
+  margin: auto 0.2em;
+  outline: none !important;
+  display: inline-block;
+}
+
+.signup-button {
+  color: #eee;
+  background-color: steelblue;
+  border-color: steelblue;
+}
+
+.login-button {
+  color: #eee;
+  background-color: #239e6b;
+  border-color: #239e6b;
+}
+
+button.inline {
+  display: inline !important;
+  color: tomato;
+  font-size: 1em;
+}
+
+.sorry {
+  margin-top: 2em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+}
