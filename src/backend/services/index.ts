@@ -3,6 +3,8 @@ import { createMeasurementService } from "./measurement";
 import { createUserService } from "./user";
 const { DB_HOST, DB_USER, DB_PASS, DB_NAME } = process.env;
 
+// console.log("ALL", DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
 export const db = knex({
   client: "pg",
   connection: {

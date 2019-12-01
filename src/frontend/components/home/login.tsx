@@ -5,8 +5,11 @@ import { useLogin } from "../../actions/auth";
 
 const Login: React.FC<any> = (props: any): JSX.Element => {
   const [log, setLog] = useState<any>({});
+  const [error, setError] = useState<string>("");
   const { errors, checkError, validate, addError } = useValidator(log);
   const [login, { loading, data }] = useLogin();
+
+  if (loading) return <p>Loading ...</p>;
 
   function doLogin(e: ButtonClickEvent): void {
     e && e.preventDefault();
@@ -29,8 +32,6 @@ const Login: React.FC<any> = (props: any): JSX.Element => {
     setLog((pre: any) => ({ ...pre, [field]: val }));
   }
 
-  if (loading) return <p>Loading ...</p>;
-
   const onKeydown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.nativeEvent.keyCode === 13) {
       doLogin(null);
@@ -39,7 +40,6 @@ const Login: React.FC<any> = (props: any): JSX.Element => {
 
   if (data && data.login) {
     const loginData = { ...data.login };
-
     saveSession(loginData);
     props.onView("/home");
   }
@@ -48,6 +48,11 @@ const Login: React.FC<any> = (props: any): JSX.Element => {
     <form>
       <fieldset className="slick-form-fields">
         <span className="legend">Login to FitBitz</span>
+        {data && !data.login && (
+          <div className="input-group">
+            <span className="form-error">Incorrect email and/or password</span>
+          </div>
+        )}
         <Input
           name="email"
           type="text"

@@ -8,7 +8,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prestart": "yarn build",
     "start": "node dist/app.server.js",
     "dev:fee": "NODE_ENV=development mode=fee webpack-dev-server",
     "dev:bee": "NODE_ENV=development mode=bee webpack --watch",
