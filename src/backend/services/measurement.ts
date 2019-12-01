@@ -1,5 +1,6 @@
 import knex from "knex";
 const returnList = ["time", "weight"];
+
 export interface Measurement {
   id: number;
   userid: number;
