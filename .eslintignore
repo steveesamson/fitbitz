@@ -11,3 +11,7 @@ webpack.backend.config.js
 preproject.js
 
 jest.config.js
+
+jest.setup.ts
+
+__mocks__
