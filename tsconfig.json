@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "module": "es6",
+    "noImplicitAny": true,
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}
