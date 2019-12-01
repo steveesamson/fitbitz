@@ -1,0 +1,8 @@
+{
+  "name": "fitbitz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/steveesamson/fitbitz.git",
+  "author": "Steve S. Samson <stevee.samson@gmail.com>",
+  "license": "MIT"
+}
