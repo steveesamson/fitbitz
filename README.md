@@ -7,6 +7,19 @@ A simple app showcasing Apollo graphQL Server and Client, Express and Knex with 
 There is a **`.env`** file in the root of application.
 Should you decide to change the configuration in the file make sure you update the **`scripts\db.sql`** script otherwise, the application would not be able to connect to your database.
 
+## Installation
+
+Inside the application root folder, in your terminal, type the following:
+
+```cli
+    yarn install
+
+    or
+
+    npm install
+
+```
+
 ## Runing the unit tests
 
 ```cli
