@@ -8,27 +8,27 @@ export interface Measurement {
   time: string;
 }
 const createMeasurementService = (db: knex<any, any>) => {
+  const _db = db<Measurement>("measurements");
   return {
     create(options: Measurement) {
-      return db<Measurement>("measurements").insert(options, ["id"]);
+      return _db.insert(options, ["id"]);
     },
     getAll(options: any = {}) {
-      return db<Measurement>("measurements").where(options);
+      return _db.where(options);
     },
     getByOwner(user: number) {
-      return db<Measurement>("measurements").where("userid", user);
+      return _db.where("userid", user);
     },
     update(options: Measurement) {
       const id = options.id;
       delete options.id;
-      return db<Measurement>("measurements")
-        .where("id", id)
-        .update(options, returnList);
+
+      _db.where({ id });
+
+      return _db.update(options, returnList);
     },
     destroy(id: number) {
-      return db<Measurement>("measurements")
-        .where("id", id)
-        .del();
+      return _db.where("id", id).del();
     }
   };
 };
